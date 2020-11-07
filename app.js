@@ -1,5 +1,7 @@
 // Get the element charactersList from html
 const charactersList = document.getElementById('charactersList');
+
+
 let hpCharacters = [];
 
 
@@ -20,8 +22,10 @@ const displayCharacters = (characters) => {
         .map((character) => {
             return `
             <li class="character">
-                <h2>${character.name}</h2>
-                <p>House: ${character.house}</p>
+                <div class="character-data">
+                    <h2>${character.name}</h2>
+                    <p>House: ${character.house}</p>                    
+                </div>               
                 <img src="${character.image}"></img>
             </li>
         `;
